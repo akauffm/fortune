@@ -1,7 +1,7 @@
 var sketch = function(p) {
 
-  var x = 100; 
-  var y = 100;
+  var x = 10; 
+  var y = 80;
   var lines, markov, data;
   var animating = false;
   var countdown = 0;

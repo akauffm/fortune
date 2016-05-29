@@ -12,7 +12,7 @@ var sketch = function(p) {
   };
 
   p.setup = function() {
-    var canvas = p.createCanvas(400, 400);
+    var canvas = p.createCanvas(400, 200);
     lines = [" "];
     markov = new RiMarkov(6);
     markov.loadText(data.join(' '));

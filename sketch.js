@@ -4,8 +4,8 @@ var sketch = function(p) {
   var y = 80;
   var lines, markov, data;
   var animating = false;
-  var countdown = 0;
-  var alpha = 255;
+  var countdown = 1000;
+  var alpha = 0;
 
   p.preload = function() {
   	data = p.loadStrings('strings/hba.txt');

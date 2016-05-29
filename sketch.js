@@ -1,7 +1,7 @@
 var sketch = function(p) {
 
-  var x = 0; 
-  var y = 0;
+  var x = 100; 
+  var y = 100;
   var lines, markov, data;
   var animating = false;
   var countdown = 0;
@@ -12,7 +12,7 @@ var sketch = function(p) {
   };
 
   p.setup = function() {
-    var canvas = p.createCanvas(500, 500);
+    var canvas = p.createCanvas(400, 400);
     lines = [" "];
     markov = new RiMarkov(6);
     markov.loadText(data.join(' '));
@@ -23,6 +23,7 @@ var sketch = function(p) {
     p.fill(255);
     p.textAlign(p.CENTER);
     p.noStroke();
+    lines = markov.generateSentences(1);
     drawText();
   };
 

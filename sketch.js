@@ -51,9 +51,20 @@ var sketch = function(p) {
   	p.text(lines.join(' '), x, y, 400, 400);
   };
 
-  p.mousePressed = function() {
-    if (!p.fullscreen()) p.fullscreen(true);
+  p.mouseReleased = function() {
+    if (!animating){
+		countdown = 1000;
+	  	alpha = 0;
+	  	lines = markov.generateSentences(1);
+    	drawText();
+  	}
 };
+
+ p.touchEnded = function() {
+  if (!p.fullscreen()) p.fullscreen(true);
+  // prevent default
+  return false;
+}
 
   p.deviceTurned = function() {
   	if (!animating){

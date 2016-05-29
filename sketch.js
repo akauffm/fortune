@@ -1,6 +1,6 @@
 var sketch = function(p) {
 
-  var x = 10; 
+  var x = 0; 
   var y = 80;
   var lines, markov, data;
   var animating = false;

@@ -51,18 +51,16 @@ var sketch = function(p) {
   };
 
   p.mousePressed = function() {
-    //if (!p.fullscreen()) p.fullscreen(true);
-    if (!animating){
+    if (!p.fullscreen()) p.fullscreen(true);
+};
+
+  p.deviceTurned = function() {
+  	if (!animating){
 		countdown = 1000;
 	  	alpha = 0;
 	  	lines = markov.generateSentences(1);
     	drawText();
   	}
-};
-
-  p.deviceTurned = function() {
-  	lines = markov.generateSentences(1);
-  	drawText();
 };
 };
 
